@@ -21,13 +21,13 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: mahesh8887/image-name:latest        
+        image: jinesh1893/image-name:latest        
         ports:
-        - containerPort: 8080        
+        - containerPort: 9600    
         readinessProbe:
           httpGet:
             path: /webapp
-            port: 8080
+            port: 9600
           initialDelaySeconds: 30
           periodSeconds: 30
           successThreshold: 1
@@ -47,5 +47,5 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 8080
-    nodePort: 30000
+    targetPort: 9600
+    nodePort: 70000
